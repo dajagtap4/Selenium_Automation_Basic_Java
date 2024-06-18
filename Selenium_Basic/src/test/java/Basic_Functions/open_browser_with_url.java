@@ -16,6 +16,6 @@ public class open_browser_with_url {
 		driver.manage().window().maximize();
 		driver.close();
 
-		System.out.println("passed...");
+		System.out.println("passed..."); 
 	}
 }
