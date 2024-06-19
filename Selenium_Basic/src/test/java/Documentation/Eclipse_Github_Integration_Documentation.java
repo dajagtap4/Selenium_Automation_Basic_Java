@@ -1,15 +1,7 @@
-/**
- * 
- */
-package Documentation;
 
-/**
- * @author Deepak
- *
- */
-public class Eclipse_Github_Integration_Documentation {
-
-//	Integrate eclipse with GitHub
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+// <<<< 1.Integrate, eclipse with GitHub >>>>
 //
 //	Step 1 : Click on search box in eclipse right top corner,
 //	Step 2 : Search Git Repository > click on git repository option,
@@ -32,4 +24,24 @@ public class Eclipse_Github_Integration_Documentation {
 //
 //	DONE
 
-}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 	
+	
+//	<<<< 2. How to use testNg >>>>
+
+//	Step 1 : Add maven dependancy for testng in pom.xml file,
+//	Step 2 : Remove main() from test class if existed,
+//	Step 3 : Add @Test annotaion in test class, refer below ex.
+	
+//	class redio_Button {
+//		@Test
+//		public void testName() {
+//			System.setProperty(null, null);
+//			WebDriver driver = new ChromeDriver();
+//			driver.get('url');
+//		}
+//}
+	
+//	DONE
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
