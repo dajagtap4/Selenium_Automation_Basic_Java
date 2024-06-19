@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Basic_Functions;
+package Documentation;
 
 /**
  * @author Deepak
