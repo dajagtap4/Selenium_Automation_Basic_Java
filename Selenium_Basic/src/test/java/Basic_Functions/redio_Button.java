@@ -13,6 +13,8 @@
 
 package Basic_Functions;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,11 +36,15 @@ public class redio_Button {
 
 		// Assert if redio button selected or not
 		if (redio_button.isSelected()) {
-			System.out.println("Selected..");
+			System.out.println("Selected..");//Selected..
 		} else {
 			System.out.println("not selected");
 		}
 
+		// to check total numbers of redio buttons 
+		List<WebElement> sizeofredio = driver.findElements(By.xpath("//input[@name='webform' and @ type='radio']"));
+		System.out.println(sizeofredio.size());//3
+		
 		driver.close();
 	}
 }
