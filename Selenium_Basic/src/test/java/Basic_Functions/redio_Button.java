@@ -4,6 +4,9 @@
 //			We can select redio button by using WebElement,
 //			Also with xpath, id, css and many more.
 
+//			Simplest way to select redio button is as below,
+//			driver.findElement(By.id("vfb-7-1")).click();
+
 //		2. Assert redio button selected or not,
 //			In below code we assert with if() else, belows are other ways to assert,
 
@@ -28,7 +31,7 @@ public class redio_Button {
 				"C:\\Users\\Deepak\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://demo.guru99.com/test/radio.html");
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 
 		// Add redio buttons locator
 		WebElement redio_button = driver.findElement(By.id("vfb-7-1"));
