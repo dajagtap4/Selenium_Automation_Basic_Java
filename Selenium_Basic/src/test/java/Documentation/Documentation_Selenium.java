@@ -1,4 +1,6 @@
-
+package Documentation;
+public class Documentation_Selenium {
+	
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	
 // <<<< 1.Integrate, eclipse with GitHub >>>>
@@ -45,3 +47,5 @@
 //	DONE
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+}
