@@ -1,10 +1,14 @@
 //	This class contains ,
 
+
 //	1. How to handle alert poup,
 //		driver.switchTo().alert().accept();
 
 //	2. how to handle iframe objects,
 //		driver.switchTo().frame("iframeResult");
+
+//	3. How to get text from alert poup box
+//		String actualMessage = driver.switchTo().alert().getText();
 
 //	3. how to validate actual and expected alert popup message with assertion.
 //		Assert.assertEquals(actualMessage, expectedMessasge);
