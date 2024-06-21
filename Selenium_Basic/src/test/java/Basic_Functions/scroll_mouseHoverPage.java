@@ -13,7 +13,7 @@ public class scroll_mouseHoverPage {
 	@Test
 	public void scroll() throws InterruptedException {
 
-		scroll_mouseHoverPage_PO.setUp();
+		driverSetup.setUp();
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("https://www.amazon.in/");
 		driver.manage().window().maximize();
@@ -42,7 +42,7 @@ public class scroll_mouseHoverPage {
 	@Test
 	public void hoverPage() throws InterruptedException {
 
-		scroll_mouseHoverPage_PO.setUp();
+		driverSetup.setUp();
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("https://www.ebay.com/");
 		driver.manage().window().maximize();

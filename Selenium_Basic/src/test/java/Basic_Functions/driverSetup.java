@@ -2,7 +2,7 @@ package Basic_Functions;
 
 import org.testng.annotations.Test;
 
-public class scroll_mouseHoverPage_PO {
+public class driverSetup {
 	@Test
 	public static void setUp() {
 		System.setProperty("webdriver.chrome.driver",
