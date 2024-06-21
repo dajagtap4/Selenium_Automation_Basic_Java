@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-21T17:19:57 IST" name="Default suite" finished-at="2024-06-21T17:20:04 IST" duration-ms="7015">
+  <suite started-at="2024-06-21T17:54:18 IST" name="Default suite" finished-at="2024-06-21T17:54:32 IST" duration-ms="14141">
     <groups>
     </groups>
-    <test started-at="2024-06-21T17:19:57 IST" name="Default test" finished-at="2024-06-21T17:20:04 IST" duration-ms="7015">
-      <class name="Basic_Functions.redio_Button">
-        <test-method signature="redio_Button_Feature()[pri:0, instance:Basic_Functions.redio_Button@72967906]" started-at="2024-06-21T17:19:57 IST" name="redio_Button_Feature" finished-at="2024-06-21T17:20:04 IST" duration-ms="6985" status="PASS">
+    <test started-at="2024-06-21T17:54:18 IST" name="Default test" finished-at="2024-06-21T17:54:32 IST" duration-ms="14141">
+      <class name="Basic_Functions.multiWindowHandle">
+        <test-method signature="multiWindowHandle_method()[pri:0, instance:Basic_Functions.multiWindowHandle@223191a6]" started-at="2024-06-21T17:54:18 IST" name="multiWindowHandle_method" finished-at="2024-06-21T17:54:32 IST" duration-ms="14109" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- redio_Button_Feature -->
-      </class> <!-- Basic_Functions.redio_Button -->
+        </test-method> <!-- multiWindowHandle_method -->
+      </class> <!-- Basic_Functions.multiWindowHandle -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
