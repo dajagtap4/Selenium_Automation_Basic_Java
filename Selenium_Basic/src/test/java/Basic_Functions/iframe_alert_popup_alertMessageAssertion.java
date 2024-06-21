@@ -21,12 +21,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class iframe_alert_popup_alertMessageAssertion {
 
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Deepak\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	@Test
+	public void iframe_alert_feature() {
+		
+		driverSetup.setUp();
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert");

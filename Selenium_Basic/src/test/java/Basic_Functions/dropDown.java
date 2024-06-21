@@ -5,12 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 public class dropDown {
 
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Deepak\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");WebDriver driver = new ChromeDriver();
+	@Test
+	public void dropDownFeature() {
+		
+		driverSetup.setUp();
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.globalsqa.com/demo-site/select-dropdown-menu/");
 		driver.manage().window().maximize();
 		
