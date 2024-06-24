@@ -33,7 +33,6 @@ public class multiWindowHandle {
 
 		driver.switchTo().window(parentW);
 		Thread.sleep(2000);
-		driver.quit();
-//watch window handle video and push this code to git
+		driver.quit();		
 	}
 }

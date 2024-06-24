@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Basic_Functions.open_browser_with_url">
+      <class name="FrameWork.makeMyTripTest">
         <methods>
-          <include name="open_browser_with_url_Method"/>
+          <include name="flightBookingDemo"/>
         </methods>
-      </class> <!-- Basic_Functions.open_browser_with_url -->
+      </class> <!-- FrameWork.makeMyTripTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
