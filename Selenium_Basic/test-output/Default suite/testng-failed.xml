@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FrameWork.makeMyTripTest">
+      <class name="datePicker.datePickerInDepth">
         <methods>
-          <include name="flightBookingDemo"/>
+          <include name="datePickerJQuery"/>
         </methods>
-      </class> <!-- FrameWork.makeMyTripTest -->
+      </class> <!-- datePicker.datePickerInDepth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
