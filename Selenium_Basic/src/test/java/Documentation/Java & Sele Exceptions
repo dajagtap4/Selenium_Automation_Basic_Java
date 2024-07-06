@@ -1,0 +1,26 @@
+JAVA ECPETIONS - 
+
+IOException
+Class­Not­Found
+No­Such­Field 
+No­Such­Method
+Array­Index­Out­Of­Bounds
+String­Index­Out­Of­Bounds
+Arithmetic
+Class­Cast
+Null­Pointer
+
+
+
+SELENIUM EXCEPTION-
+
+Timeout
+WebDriver
+Screenshot
+NoSuchElement
+NoSuchFrame
+ElementNotVisible
+ElementNotClickable
+NoAlertPresent
+StaleElementReference
+element click intercepted

@@ -1,0 +1,31 @@
+Annotations
+
+	@test
+
+		Attributes
+
+			1.@Test(description = "Test summary")
+
+			2.@Test(dataProvider = "name of dataProvider")
+
+			3.@Test(priority = 2)
+
+			4.@Test(enabled = false)
+	
+			5.@Test(groups = { "sanity", "regression" })
+	
+			7.@Test(dependsOnMethods = { "dependentTestMethodName" })
+
+			8.@Test(dependsOnGroups = { "dependentGroup" })
+
+			9.@Test(alwaysRun=True)
+
+			10.@Test (timeOut = 500)
+
+	@DataProvider
+
+	@Parameter
+
+	@Listener
+
+	@Factory
