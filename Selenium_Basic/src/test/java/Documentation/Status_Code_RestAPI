@@ -1,0 +1,10 @@
+200 OK
+201 Created
+204 Not Content
+304 Not Modified
+400 Bad Request
+401 Unauthoried
+403 forbidden
+404 not found
+409 conflict
+500 internal server error
