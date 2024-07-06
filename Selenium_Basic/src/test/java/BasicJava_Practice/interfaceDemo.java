@@ -28,6 +28,7 @@ public class interfaceDemo implements Shape{
 		
 		//Scenario 1
 		interfaceDemo ref = new interfaceDemo();
+		//ref.length = 200; //Error.. length is final in shape, Cant assign.
 		ref.abstractMethod();
 		ref.defaultMethod();
 		Shape.staticMethod();
