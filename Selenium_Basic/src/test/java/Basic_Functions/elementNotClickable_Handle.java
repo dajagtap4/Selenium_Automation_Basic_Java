@@ -19,7 +19,7 @@ public class elementNotClickable_Handle {
 		
 		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[1]/ul/li[5]/div/div[1]")).click();
 		WebElement element = driver. findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div/div/nav/ul/li[9]/span/a")); 
-
+		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();",element);
 	}

@@ -1,0 +1,10 @@
+ Is there a way to type in a textbox without using sendKeys()?
+Yes! Text can be entered into a textbox using JavaScriptExecutor
+
+Refer below code :
+
+        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+		Thread.sleep(3000);
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='iphone'", searchBox);

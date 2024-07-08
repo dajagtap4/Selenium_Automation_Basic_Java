@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Basic_Functions.screenShot">
+      <class name="Basic_Functions.open_browser_with_url">
         <methods>
-          <include name="takeScreenShot"/>
+          <include name="open_browser_with_url_Method"/>
         </methods>
-      </class> <!-- Basic_Functions.screenShot -->
+      </class> <!-- Basic_Functions.open_browser_with_url -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
