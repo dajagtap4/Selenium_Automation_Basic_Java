@@ -19,6 +19,8 @@ public class screenShot {
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
 		
+//		TakeScreenshot interface can be used to take screenshots in WebDriver.
+//		getScreenshotAs() method can be used to save the screenshot
 		File ref = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(ref, new File(".\\screenshot\\screen.png"));
 		
