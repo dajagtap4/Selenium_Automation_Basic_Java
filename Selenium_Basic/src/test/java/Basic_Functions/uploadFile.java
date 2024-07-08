@@ -19,8 +19,9 @@ public class uploadFile {
 
 		WebElement browse = driver.findElement(By.id("P0-0"));
 
-		Actions actions = new Actions(driver);
-		actions.moveToElement(browse).perform();
+//		below,code is for scroll upload option only
+//		Actions actions = new Actions(driver);
+//		actions.moveToElement(browse).perform();
 
 		browse.sendKeys("C:\\Automation\\Documentaion\\Java Concepts\\37-50.txt");
 	}
