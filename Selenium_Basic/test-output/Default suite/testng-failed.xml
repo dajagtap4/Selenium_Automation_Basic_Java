@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Basic_Functions.elementNotClickable_Handle">
+      <class name="Basic_Functions.screenShot">
         <methods>
-          <include name="testHandle"/>
+          <include name="takeScreenShot"/>
         </methods>
-      </class> <!-- Basic_Functions.elementNotClickable_Handle -->
+      </class> <!-- Basic_Functions.screenShot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
