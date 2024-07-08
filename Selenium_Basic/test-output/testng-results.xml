@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-08T09:39:14 IST" name="Default suite" finished-at="2024-07-08T09:39:24 IST" duration-ms="9484">
+  <suite started-at="2024-07-08T12:11:44 IST" name="Default suite" finished-at="2024-07-08T12:11:47 IST" duration-ms="3484">
     <groups>
     </groups>
-    <test started-at="2024-07-08T09:39:14 IST" name="Default test" finished-at="2024-07-08T09:39:24 IST" duration-ms="9484">
-      <class name="Basic_Functions.open_browser_with_url">
-        <test-method signature="open_browser_with_url_Method()[pri:0, instance:Basic_Functions.open_browser_with_url@59662a0b]" started-at="2024-07-08T09:39:14 IST" name="open_browser_with_url_Method" finished-at="2024-07-08T09:39:24 IST" duration-ms="9441" status="PASS">
+    <test started-at="2024-07-08T12:11:44 IST" name="Default test" finished-at="2024-07-08T12:11:47 IST" duration-ms="3484">
+      <class name="Basic_Functions.uploadFile">
+        <test-method signature="uploadFileTest()[pri:0, instance:Basic_Functions.uploadFile@59662a0b]" started-at="2024-07-08T12:11:44 IST" name="uploadFileTest" finished-at="2024-07-08T12:11:47 IST" duration-ms="3454" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- open_browser_with_url_Method -->
-      </class> <!-- Basic_Functions.open_browser_with_url -->
+        </test-method> <!-- uploadFileTest -->
+      </class> <!-- Basic_Functions.uploadFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
