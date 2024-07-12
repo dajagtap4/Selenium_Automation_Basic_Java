@@ -1,6 +1,6 @@
 package BasicJava_Practice;
 
-public class duplicateInString {
+public class SNIPPET_duplicateInString {
 
 	public static void main(String[] args) {
 		String str = "deepak jagtap";

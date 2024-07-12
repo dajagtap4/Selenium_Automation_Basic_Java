@@ -1,6 +1,6 @@
 package BasicJava_Practice;
 
-public class reverseString {
+public class SNIPPET_reverseString {
 
 	public static void main(String[] args) {
 		String string1 = "Pune";
