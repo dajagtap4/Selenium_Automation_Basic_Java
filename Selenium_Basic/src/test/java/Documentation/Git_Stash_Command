@@ -17,6 +17,7 @@ Git stash list
 	
 Git stash apply
 	You can re-apply the changes that you just stashed by using the 'git stash' command.
+	'GIt stash pop' is similar but pop will delete stash from stack.
 	
 git stash apply stash@{1}
 	re-apply the changes at 1 index order
@@ -29,6 +30,7 @@ git stash show -p
 	
 Git stash pop
 	It removes changes from stash & applies to working file.
+	'GIt stash apply' is similar but pop will delete stash from stack.
 	
 Git stash drop  
 git stash drop stash@{1}  
