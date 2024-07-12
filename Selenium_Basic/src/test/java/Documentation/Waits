@@ -1,0 +1,32 @@
+Fluent Wait Syntax -
+
+Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			.withTimeOut(Duration.ofSeconds(30))
+			.pollingEvery(Duration.ofSeconds(5))
+			.ignoring(NoSuchElementException.class);
+			
+			
+WebElement username = wait.until(new Function<WebDriver, WebDriver>()
+	{
+		Public WebElement apply(WebDriver driver)
+		{
+	 		return driver.FindElement(By.xpath(""));
+		}
+	});
+	
+-------------------------------------------------------------------------------------
+	
+Explicit Wait Syantax - 
+
+WebDriverWait w = new WebDriverWait(driver , Duration.ofSeconds(10));
+
+WebElement username = w.until(ExpectedConditions.visisbilityOfElementLocated(By.xpath(" ")));
+username.sendKeys("admin123");
+
+-------------------------------------------------------------------------------------
+
+Implicit Wait syntax -
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+-------------------------------------------------------------------------------------
