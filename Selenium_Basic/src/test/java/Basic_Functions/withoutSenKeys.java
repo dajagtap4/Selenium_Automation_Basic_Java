@@ -1,5 +1,6 @@
-package Basic_Functions;
+//enter text in searchbox without sendKeys()
 
+package Basic_Functions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,15 +14,18 @@ public class withoutSenKeys {
 	@Test
 	public void withoutSenKeysMethod() throws InterruptedException {
 		
-		driverSetup.setUp();
-		WebDriver driver = new ChromeDriver();
-
-		driver.get("https://www.amazon.in/");
-		driver.manage().window().maximize();
-		//driver.close();
-
-		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
-		Thread.sleep(3000);
+//		commenting to focus only on imp part that is 
+//		enter text in searchbox without sendKeys()
+		
+//		driverSetup.setUp();
+//		WebDriver driver = new ChromeDriver();
+//
+//		driver.get("https://www.amazon.in/");
+//		driver.manage().window().maximize();
+//		//driver.close();
+//
+//		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+//		Thread.sleep(3000);
 		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].value='iphone'", searchBox);

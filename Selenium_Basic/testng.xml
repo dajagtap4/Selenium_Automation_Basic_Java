@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="DemoPackage.amazonDemo"/>
+      <class name="Basic_Functions.multiWindowHandle"/>
+      <class name="Basic_Functions.withoutSenKeys"/>
+      <class name="Basic_Functions.dropDown"/>
+      <class name="datePicker.demoDatePicker"/>
+      <class name="Basic_Functions.iframe_alert_popup_alertMessageAssertion"/>
+      <class name="FrameWork.makeMyTripTest"/>
+      <class name="Basic_Functions.redio_Button"/>
+      <class name="BasicJava_Practice.list_Practice_With_Notes"/>
+      <class name="Basic_Functions.checkBox"/>
+      <class name="Basic_Functions.uploadFile"/>
+      <class name="Basic_Functions.scroll_mouseHoverPage"/>
+      <class name="Basic_Functions.driverSetup"/>
+      <class name="Basic_Functions.screenShot"/>
+      <class name="Basic_Functions.elementNotClickable_Handle"/>
+      <class name="datePicker.datePickerInDepth"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

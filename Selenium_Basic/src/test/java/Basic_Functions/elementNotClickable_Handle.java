@@ -17,10 +17,12 @@ public class elementNotClickable_Handle {
 		driver.manage().window().maximize();
 		driver.get("https://www.makemytrip.com/");
 		
+		//1st element
 		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[1]/ul/li[5]/div/div[1]")).click();
+		//2nd Element
 		WebElement element = driver. findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div/div/nav/ul/li[9]/span/a")); 
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();",element);
+		js.executeScript("arguments[0].click()",element);
 	}
 }
