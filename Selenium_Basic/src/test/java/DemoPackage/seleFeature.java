@@ -13,8 +13,7 @@ public class seleFeature {
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
-		
-		
+		 	
 //      >>   Multi window handle   <<
 //		driver.get("https://www.salesforce.com/in/?ir=1");
 //		

@@ -1,0 +1,46 @@
+Git Stash 
+
+Sometimes you want to switch the branches, but you are working on an incomplete part 
+of your current project. You don't want to make a commit of half-done work. 
+Git stashing allows you to do so. The git stash command enables you to switch branches 
+without committing the current branch.
+
+Git stash 
+	the directory is cleaned, 
+	you can switch between branches and work on them.
+
+Git stash save "reverse string code" 
+	save with message.
+
+Git stash list 
+	To check the stored stashes
+	
+Git stash apply
+	You can re-apply the changes that you just stashed by using the 'git stash' command.
+	
+git stash apply stash@{1}
+	re-apply the changes at 1 index order
+	
+Git stash show
+	We can track the stashes and their changes
+	
+git stash show -p 
+	partial stash show
+	
+Git stash pop
+	It removes changes from stash & applies to working file.
+	
+Git stash drop  
+git stash drop stash@{1}  
+	it deletes the most recent stash.
+	
+Git stash clear
+	deleting all the available stashes at once.
+	
+Git stash branch
+	If you stashed some work on a particular branch and continue working on that branch. 
+	Then, it may create a conflict during merging. So, it is good to stash work 
+	on a separate branch.
+
+	The 'git stash branch' command allows the user to stash work on a separate branch 
+	to avoid conflicts.
