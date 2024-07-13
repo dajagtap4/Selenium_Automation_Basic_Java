@@ -7,7 +7,7 @@ public class driverSetup {
 	public static void setUp() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Deepak\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-	
+		
 		}
 	
 	}

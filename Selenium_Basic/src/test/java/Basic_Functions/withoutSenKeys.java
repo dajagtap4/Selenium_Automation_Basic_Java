@@ -27,10 +27,12 @@ public class withoutSenKeys {
 //		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
 //		Thread.sleep(3000);
 		
+		/*
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].value='iphone'", searchBox);
 		
 		System.out.println("passed...");
 		driver.close();
+		*/
 	}
 }
