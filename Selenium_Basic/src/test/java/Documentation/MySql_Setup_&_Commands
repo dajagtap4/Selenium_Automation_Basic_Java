@@ -1,0 +1,33 @@
+Refer this link for setup 
+https://www.youtube.com/watch?v=mLQpd3hRD7g
+
+MySql schema  database import -
+https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/
+
+
+COMMANDS -
+
+show databases;
+create database cybage;
+USE cybage;
+DROP DATABASE cybage;
+
+- Create Table in cybage DB
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    hire_date DATE,
+    salary DECIMAL(10, 2)
+);
+
+- Add data into employees table
+
+INSERT INTO employees (first_name, last_name, email, hire_date, salary)
+VALUES ('Deepak', 'Jagtap', 'djagtap@gmail.com', '2021-04-07', 47000.00);
+
+- Show data from employees table
+
+SELECT * from employees;

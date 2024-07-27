@@ -9,7 +9,7 @@ public class SNIPPET_Min_Max_Array {
 		int min = a[0];
 //      int Max = a[0]; // to find max nu.
 
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 1; i < a.length; i++) {
 
 //		    if (a[i] > max) to find Max nu.
 			if (a[i] < min) 
