@@ -12,6 +12,20 @@ create database cybage;
 USE cybage;
 DROP DATABASE cybage;
 
+- Some of The Most Important SQL Commands
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+
 - Create Table in cybage DB
 
 CREATE TABLE employees (
@@ -30,4 +44,40 @@ VALUES ('Deepak', 'Jagtap', 'djagtap@gmail.com', '2021-04-07', 47000.00);
 
 - Show data from employees table
 
-SELECT * from employees;
+mysql> SELECT * from employees;
++----+------------+-----------+-------------------+------------+----------+
+| id | first_name | last_name | email             | hire_date  | salary   |
++----+------------+-----------+-------------------+------------+----------+
+|  1 | Deepak     | Jagtap    | djagtap@gmail.com | 2021-04-07 | 47000.00 |
+|  2 | tushar     | Dhage     | tdhage@gmail.com  | 2021-04-07 | 51000.00 |
+|  3 | Akshay     | Mule      | amule@gmail.com   | 2021-04-07 | 55000.00 |
+|  4 | rajiv      | nayak     | rnayak@gmail.com  | 2022-04-07 | 61000.00 |
++----+------------+-----------+-------------------+------------+----------+
+
+mysql> SELECT first_name, salary, email FROM employees;
++------------+----------+-------------------+
+| first_name | salary   | email             |
++------------+----------+-------------------+
+| Deepak     | 47000.00 | djagtap@gmail.com |
+| tushar     | 51000.00 | tdhage@gmail.com  |
+| Akshay     | 55000.00 | amule@gmail.com   |
+| rajiv      | 61000.00 | rnayak@gmail.com  |
++------------+----------+-------------------+
+
+mysql> SELECT hire_date FROM employees;
++------------+
+| hire_date  |
++------------+
+| 2021-04-07 |
+| 2021-04-07 |
+| 2021-04-07 |
+| 2022-04-07 |
++------------+
+
+mysql> SELECT DISTINCT hire_date FROM employees;
++------------+
+| hire_date  |
++------------+
+| 2021-04-07 |
+| 2022-04-07 |
++------------+
