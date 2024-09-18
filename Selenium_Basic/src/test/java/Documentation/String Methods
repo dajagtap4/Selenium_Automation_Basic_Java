@@ -1,22 +1,87 @@
 Method <>  	 Return Type   <>   Description	 
 
-charAt()	char     Returns the character at the specified index (position)	
+-----------------------------------------------------------------------------
+charAt()	char     Returns the character at the specified index (position)
 
+Ex.  String name = "Deepak";
+     System.out.println(name.charAt(4));
+
+OP.  a
+-----------------------------------------------------------------------------
 compareTo()	 int   Compares two strings lexicographically	
 
+Ex.     String firstname = "Deepak";
+        String lastname = "Jagtap";   
+     // String lastname = "Deepak"; // OP. 0
+
+        System.out.println(firstname.compareTo(lastname));
+
+OP.     -6
+-----------------------------------------------------------------------------
 concat()	Appends a string to the end of another string	String
 
+Ex.     String firstname = "Deepak ";
+        String lastname = "Jagtap";
+        System.out.println(firstname.concat(lastname));
+
+OP.     Deepak Jagtap
+-----------------------------------------------------------------------------
 contains()	Checks whether a string contains a sequence of characters	boolean
+
+Ex.     String firstname = "Deepak ";
+        System.out.println(firstname.contains("De"));      // true
+        System.out.println(firstname.contains("ak"));      // true
+        System.out.println(firstname.contains("jagtap"));  // false
+   
+-----------------------------------------------------------------------------
 contentEquals()	Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer	boolean
 
+Ex.     String firstname = "Deepak";
+        System.out.println(firstname.contentEquals("Deepak")); // true
+        System.out.println(firstname.contentEquals("Dee"));    // false
+
+-----------------------------------------------------------------------------
 endsWith()	Checks whether a string ends with the specified character(s)	boolean
 
+Ex.     String firstname = "Deepak";
+        System.out.println(firstname.endsWith("De"));    // false
+        System.out.println(firstname.endsWith("epak"));  // true
+        System.out.println(firstname.endsWith("ak"));    // true
+
+-----------------------------------------------------------------------------
 equals()	Compares two strings. Returns true if the strings are equal, and false if not	boolean
+
+Ex.     String firstname = "Deepak";
+        String  myname   = "Deepak";
+        String lastname  = "Jagtap";
+
+        System.out.println(firstname.equals(myname));    // true
+        System.out.println(firstname.equals(lastname));  // false
+
+-----------------------------------------------------------------------------
 equalsIgnoreCase()	Compares two strings, ignoring case considerations	boolean
+
+Ex.     String firstname = "deepak";
+        String  myname   = "DEEPAK";
+        String lastname  = "Jagtap";
+
+        System.out.println(firstname.equals(myname));    // true
+        System.out.println(firstname.equals(lastname));  // false
+
+-----------------------------------------------------------------------------
 
 hashCode()	Returns the hash code of a string	int
 
+Ex.     String firstname = "Deepak";
+        System.out.println(firstname.hashCode());  // 2043177526
+
+-----------------------------------------------------------------------------
 indexOf()	Returns the position of the first found occurrence of specified characters in a string	int
+
+Ex.     String fullname = "Deepak ashokrao jagtap";
+        System.out.println(fullname.indexOf("ashokrao"));  // 7
+
+-----------------------------------------------------------------------------
 
 isEmpty()	Checks whether a string is empty or not	boolean
 
@@ -35,10 +100,15 @@ split()	Splits a string into an array of substrings	String[]
 startsWith()	Checks whether a string starts with specified characters	boolean
 
 substring()	Returns a new string which is the substring of a specified string	String
-
+-----------------------------------------------------------------------------
 toCharArray()	Converts this string to a new character array	char[]
 
+Ex.    String fullname = "Deepak";
+       char[] myArray = fullname.toCharArray();
 
+       System.out.println(myArray[2]); // e
+
+-----------------------------------------------------------------------------
 toUpperCase()	Converts a string to upper case letters	String
 toLowerCase()	Converts a string to lower case letters	String
 
