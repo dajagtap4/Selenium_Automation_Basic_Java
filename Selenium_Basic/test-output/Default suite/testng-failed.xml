@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FrameWork.makeMyTripTest">
+      <class name="forDemo.demoClass">
         <methods>
-          <include name="flightBookingDemo"/>
+          <include name="demoTest"/>
         </methods>
-      </class> <!-- FrameWork.makeMyTripTest -->
+      </class> <!-- forDemo.demoClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
