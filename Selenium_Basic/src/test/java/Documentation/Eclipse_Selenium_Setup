@@ -1,0 +1,11 @@
+1. install eclipse
+    https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2024-09/R/eclipse-inst-jre-win64.exe
+
+2. install java - use file availabel in documentation folder
+    Selenium_Automation_Basic_Java/Selenium_Basic/src/test/java/Documentation/java installation steps
+3. create maven project 
+
+4. add maven dependancies in pom.xml
+
+5. install testng plugin from eclipse marketplace
+    Help > eclipse marketplace > testng (search) > install
