@@ -1,0 +1,34 @@
+1. Download Maven:
+
+Go to the Apache Maven website - https://maven.apache.org/download.cgi
+Download the binary zip archive (e.g. apache-maven-3.9.9-bin.zip).
+
+2. Extract the Archive:
+
+Extract the downloaded zip file to a directory of your choice (e.g., C:\Program Files\Apache\maven).
+
+3. Set Environment Variables:
+
+Search for "Environment Variables" in the Start menu.
+Under "System Variables," click "New" to add a new variable:
+Variable name: MAVEN_HOME
+Variable value: The path to your Maven folder (e.g., C:\Program Files\Apache\maven\apache-maven-3.x.x).
+Find the Path variable in the "System Variables" section, select it, and click "Edit."
+Add a new entry: %MAVEN_HOME%\bin.
+
+4.Verify the Installation:
+
+Open Command Prompt and run:
+mvn -version
+You should see the version of Maven displayed.
+
+5. Navigate to Your Project Directory: 
+Open your command line interface and navigate to the root directory of your Maven project:
+
+6. Identify the Test Class: 
+Locate the specific test class you want to run. For example, 
+let’s say your test class is named MySeleniumTest.
+
+
+7. Run test using maven for Testng
+mvn -Dtest=MySeleniumTest test
