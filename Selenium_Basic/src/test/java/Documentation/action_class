@@ -1,0 +1,23 @@
+         // Create an instance of Actions
+        Actions actions = new Actions(driver);
+
+        // Example 1: Mouse Hover
+        WebElement hoverElement = driver.findElement(By.id("hoverElementId")
+    actions.moveToElement(hoverElement).perform();
+        
+        // Example 2: Click and Hold
+        WebElement clickAndHoldElement = // removed this line to focus on only action methods
+    actions.clickAndHold(clickAndHoldElement).perform();
+
+        // Example 3: Drag and Drop
+        WebElement sourceElement =
+        WebElement targetElement = 
+    actions.dragAndDrop(sourceElement, targetElement).perform();
+
+        // Example 4: Right Click (Context Click)
+        WebElement rightClickElement =
+    actions.contextClick(rightClickElement).perform();
+
+        // Example 5: Sending Keyboard Keys
+        WebElement inputField = 
+    actions.moveToElement(inputField).click().sendKeys("Hello, World!").perform();
