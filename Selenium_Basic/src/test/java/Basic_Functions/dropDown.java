@@ -16,12 +16,15 @@ public class dropDown {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.globalsqa.com/demo-site/select-dropdown-menu/");
 		driver.manage().window().maximize();
-		
-		WebElement dropDown = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div/div/div[2]/div/div/div/p/select"));
+
+		//Method 1 - By using select class
+		WebElement dropDown = driver.findElement(By.xpath("//div[@class='resp-tabs-container']/div[1]/p/select"));
 		Select select = new Select(dropDown);
-		
 		select.selectByIndex(1);
 		select.selectByValue("DZA");
 		select.selectByVisibleText("Angola");
+
+		//Method 2 - by using sendKeys()
+		driver.findElement(By.xpath("//div[@class='resp-tabs-container']/div[1]/p/select")).sendKeys("Angola");
 	}
 }
