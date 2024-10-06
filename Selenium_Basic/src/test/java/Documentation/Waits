@@ -30,3 +30,23 @@ Implicit Wait syntax -
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 -------------------------------------------------------------------------------------
+
+T - timeout
+P - Pooling
+C - conditions
+
+---------------------------------------------------------------------------------------------------------------------------
+Feature			|	   Implicit Wait	   |	     Explicit Wait	   |	      Fluent Wait
+---------------------------------------------------------------------------------------------------------------------------
+
+Scope	 		|   Global (affects all elements)  |                Local (affects specific elements)	
+
+Timeout(T) Setting	|	    1 global T		   |     Custom T for each wait    |      Custom T and P interval
+
+Pooling			|			   Not configurable			   |	  Configurable P interval
+
+Exception Handling	|	      NO                   |      Handles specific C	   |	  ignore specific exceptions
+
+Use Case		|	Simple scenarios	   |       Complex conditions 	   |         Complex scenarios 
+								(visibility, clickability)         with varying conditions
+----------------------------------------------------------------------------------------------------------------------------
