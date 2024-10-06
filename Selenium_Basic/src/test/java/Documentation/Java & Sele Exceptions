@@ -17,8 +17,9 @@ SELENIUM EXCEPTION-
 Timeout
 WebDriver
 Screenshot
-NoSuchElement
 NoSuchFrame
+NoSuchElement - Element is present on DOM but not on UI Page, synchronisation issue
+ElementNotFound - Incorrect Locator
 ElementNotVisible
 ElementNotClickable
 NoAlertPresent
