@@ -19,7 +19,7 @@ WebDriver
 Screenshot
 NoSuchFrame
 NoSuchElement - Element is present on DOM but not on UI Page, synchronisation issue
-ElementNotFound - Incorrect Locator
+ElementNotFound - Incorrect Locator (incorrect xpath,css)
 ElementNotVisible
 ElementNotClickable
 NoAlertPresent
