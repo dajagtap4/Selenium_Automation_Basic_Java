@@ -3,7 +3,8 @@
 //	Step 1 : Add maven dependancy for testng in pom.xml file,
 //	Step 2 : Remove main() from test class if existed,
 //	Step 3 : Add @Test annotaion in test class, refer below ex.
-	
+	Step 4 : install testng plugin from eclipse marketplace
+    			Help > eclipse marketplace > testng (search) > install
 //	class redio_Button {
 //		@Test
 //		public void testName() {
