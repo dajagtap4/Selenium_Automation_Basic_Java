@@ -1,0 +1,13 @@
+package javaPractice;
+
+import java.util.Arrays;
+
+public class sortString {
+	public static void main(String[] args) {
+		
+		String name = "deepak";
+		char[] ch = name.toCharArray();
+		Arrays.sort(ch);
+		System.out.println(ch); // adeekp
+	}
+}
