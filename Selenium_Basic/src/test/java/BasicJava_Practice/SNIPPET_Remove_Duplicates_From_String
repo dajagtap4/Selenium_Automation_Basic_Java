@@ -1,0 +1,24 @@
+package javaPractice;
+import java.util.HashSet;
+import java.util.Set;
+
+public class demoClass {
+	public static void main(String[] args) {
+		
+		String name = "Deepak";    //Depak
+		System.out.println(removeDuplicates(name));
+		
+	}
+	public static String removeDuplicates(String str) {
+		Set<Character> set = new HashSet<Character>();
+		StringBuffer sf = new StringBuffer();
+		for(int i=0;i<str.length();i++) {
+			Character c = str.charAt(i);
+			if(!set.contains(c)) {
+				set.add(c);
+				sf.append(c);
+			}
+		}
+		return sf.toString();
+	}
+}
