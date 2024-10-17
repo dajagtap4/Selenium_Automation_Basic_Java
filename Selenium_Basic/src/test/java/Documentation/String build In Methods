@@ -1,0 +1,135 @@
+package Java_String;
+
+import java.util.Arrays;
+
+public class String_Buildin_Methods {
+	public static void main(String[] args) {
+
+	// ------------split()----------------------
+
+//Ex.1
+		String s = "Deepak ashokrao jagtap";
+		String[] s1 = s.split(" ");
+		System.out.println(Arrays.toString(s1));
+		//OR
+		for(String ele:s1) {
+			System.out.println(ele);
+		}
+
+//Ex.2
+		// print - jagtapda1765
+		String email = "jagtapda1765@gmail.com";
+		String a[] = email.split("@");
+
+		for(String ele:a) {
+			if(ele.equals("jagtapda1765")) {
+				System.out.println(ele);
+			}
+		}
+
+		// ------------length()-------------------------
+
+		String name = "Deepak";
+		
+		int nameLength = name.length();
+		System.out.println(nameLength); 		//6
+		
+		System.out.println(name.length()); 		//6	
+		System.out.println("Jagtap".length()); 	//6
+
+		// ------------concat()-------------------------
+
+		String s1 = "Deepak";
+		String s2 = "Ashokrao";
+		String s3 = "Jagtap";
+		
+		System.out.println("Mumbai"+"Pune");   			//MumbaiPune
+		System.out.println("Mumbai".concat("Pune"));    //MumbaiPune
+		System.out.println(s1+s2+s3);     			    //DeepakAshokraoJagtap
+		
+		System.out.println(s1.concat(s2));     			//DeepakAshokrao
+		System.out.println(s1.concat(s3));				//DeepakJagtap
+		System.out.println(s1.concat(s2).concat(s3));	//DeepakAshokraoJagtap
+		System.out.println(s1.concat(s2+s3));			//DeepakAshokraoJagtap
+
+		// ------------trim()-------------------------
+
+		String s = "ddd";
+		s = "   De epak  ";		
+		
+		String s1 = s.trim();
+		System.out.println(s1);						//De epak
+		
+		System.out.println(s.trim());   			//De epak
+		
+		System.out.println("   De epak  ".trim());  //De epak
+
+		// ------------contains()-------------------------
+
+		String s = "Deepak";
+		
+		System.out.println(s.contains("Dee"));	 //T
+		System.out.println(s.contains("pak"));   //T
+		System.out.println(s.contains("dee"));	 //F
+		System.out.println(s.contains("paK"));	 //F
+
+		// ------------equals() | equalsIgnoreCase()-------
+
+		String s1 = "Deepak";
+		String s2 = "Deepak";
+		
+		Boolean r = s1.equals(s2);
+		System.out.println(r);
+		
+		System.out.println(s1.equals(s2));	 
+		System.out.println(s2.equals(s1));
+		  
+		System.out.println(s1.equals("Deepak"));
+		System.out.println(s1.equals("deepak")); 			//false, remaining true
+		
+		System.out.println(s1.equalsIgnoreCase("DEEPAK"));
+		System.out.println("DEEPAK".equalsIgnoreCase(s1));
+
+		// ------------replace()----------------------
+
+		String s = "my name Is Deepak, i live in Pune";
+
+		System.out.println(s.replace('i', 'k'));
+		// my name Is Deepak, k lkve kn Pune
+
+		System.out.println(s.replace('I', 'k'));
+		// my name ks Deepak, i live in Pune
+
+		System.out.println(s.replace("Pune", "LONDON"));
+		// my name Is Deepak, i live in LONDON
+
+		System.out.println(s.replace("pune", "LONDON"));
+		// my name Is Deepak, i live in Pune
+
+		// ------------substring()----------------------
+
+		String s = "Deepak";
+
+		System.out.println(s.substring(0,3));  //Dee
+
+		System.out.println(s.substring(0,1));  //D
+
+		System.out.println(s.substring(3,6));  //pak
+
+		System.out.println(s.substring(4,10)); //StringIndexOutOfBoundsException
+
+		// ------------toUpper/LowerCase()----------------------
+
+		String s = "Deepak";
+
+		System.out.println(s.toUpperCase());  //DEEPAK
+
+		System.out.println(s.toLowerCase());  //deepak
+
+		// -------------------------------------------
+	}
+
+
+
+
+}
