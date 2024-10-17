@@ -1,0 +1,41 @@
+package Java_String;
+
+public class String_poll {
+
+	public static void main(String[] args) {
+		
+		// String literal, stored in the string pool
+		String s1 = "Hello";
+		String s2 = "Deepak";
+		String s3 = "Hello";
+
+		// creates a new String object in the heap memory, bypassing the string pool.
+		String s5 = new String("Hello");
+		String s6 = new String("Hello");
+		String s7 = new String("Deepak");
+
+		System.out.println(s1);  //Hello
+		System.out.println(s2);  //Deepak
+		System.out.println(s3);	 //Hello
+		System.out.println(s5);	 //Hello
+		System.out.println(s6);	 //Hello
+		System.out.println(s7);	 //Deepak
+		
+		/*		java Heap
+		+-----------------------+
+		|   +--------------+    |   
+		|	  |	 "Hello"     |	  |<----- String s1 = "Hello";  &  String s3 = "Hello";
+		|   +--------------+   	|
+		|   |    "Deepak"  |    |<----- String s2 = "Deepak";
+		| 	+--------------+	  |
+		|  						          |
+		|  		"Hello"			      |<----- String s5 = new String("Hello"); 
+		|  		"Hello"			      |<----- String s6 = new String("Hello");					
+		|     "Deepak"		      |<----- String s7 = new String("Deepak");
+		|						            |		
+		|      String Pool     	|
+		+-----------------------+		*/
+		
+	}
+
+}
