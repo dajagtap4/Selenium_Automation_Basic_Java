@@ -1,0 +1,11 @@
+All about String 
+
+ built-in class
+
+String s1 = "Hello";                // String literal, // stored in the string pool
+String s2 = new String("Hello");    // creates a new String object in the heap memory, bypassing the string pool.
+
+Strings created using literals are stored in the string pool, which is a special memory area in the heap. 
+If another string with the same content already exists in the pool, the new reference points to the existing string.
+
+The new keyword explicitly creates a new String object in the heap memory, bypassing the string pool.
