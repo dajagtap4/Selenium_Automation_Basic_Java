@@ -1,0 +1,34 @@
+package Java_String;
+
+public class StringComparision {
+
+	public static void main(String[] args) {
+
+		String s1 = "Deepak";
+		String s2 = "Deepak";
+		String s3 = new String("Deepak");
+		String s4 = new String("Deepak");
+		String s5 = s4;
+		
+		System.out.println(s1==s2);  //check object 
+		System.out.println(s2==s3);  //check object
+		System.out.println(s3==s4);  //check object
+		
+		System.out.println(s1.equals(s2));  //check value
+		System.out.println(s2.equals(s3));  //check value
+		System.out.println(s3.equals(s4));  //check value
+		
+		System.out.println(s4==s5);			//check object 
+		System.out.println(s4.equals(s5));	//check object 
+		
+	/*  true
+		false
+		false
+		true
+		true
+		true
+		true
+		true  */
+	} 
+
+}
