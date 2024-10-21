@@ -71,3 +71,43 @@ Polymorphism: Interfaces enable polymorphism, allowing methods to use parameters
 
 Separation of Concerns: They help separate the definition of methods from their implementations, 
 	leading to cleaner and more maintainable code.
+
+
+
+
+TypeScript Interface 
+
+interface I1{
+  a:number
+  b:number
+  sum():number
+}
+
+interface I2 extends I1{
+  x:number
+  y:number
+  sub():number
+}
+
+class C1 implements I2{
+  a:number
+  b:number
+  x:number
+  y:number
+  
+  sum():number{
+    return (this.a+this.b)
+  }
+   
+  sub():number{
+    return (this.x-this.y)
+  }
+}
+
+var c=new C1()
+c.a=10
+c.b=20
+c.x=30
+c.y=40
+console.log(c.sum())
+console.log(c.sub())
