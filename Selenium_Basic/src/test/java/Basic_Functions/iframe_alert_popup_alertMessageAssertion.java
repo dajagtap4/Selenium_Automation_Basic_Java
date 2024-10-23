@@ -38,16 +38,19 @@ public class iframe_alert_popup_alertMessageAssertion {
 		// click on 'Try it' button
 		driver.findElement(By.xpath("/html/body/button")).click();
 
+		  // Switch to alert
+        	Alert alert = driver.switchTo().alert();
+		
 		// Alert message Confirmation/assertion
 		String expectedMessasge = "I am an alert box!";
-		String actualMessage = driver.switchTo().alert().getText();
+		String actualMessage = alert.getText();
 		Assert.assertEquals(actualMessage, expectedMessasge);
 
 		System.out.println("actualMessage : " + actualMessage);
 		System.out.println("expectedMessasge : " + expectedMessasge);
 
 		// click on OK button on alert popup to close this popup
-		driver.switchTo().alert().accept();
+		alert.accept();
 		
 		System.out.println("Passed...");
 
