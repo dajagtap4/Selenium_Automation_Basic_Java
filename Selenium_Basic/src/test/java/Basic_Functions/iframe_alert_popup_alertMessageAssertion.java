@@ -1,20 +1,4 @@
-//	This class contains ,
-
-
-//	1. How to handle alert poup,
-//		driver.switchTo().alert().accept();
-
-//	2. how to handle iframe objects,
-//		driver.switchTo().frame("iframeResult");
-
-//	3. How to get text from alert poup box
-//		String actualMessage = driver.switchTo().alert().getText();
-
-//	3. how to validate actual and expected alert popup message with assertion.
-//		Assert.assertEquals(actualMessage, expectedMessasge);
-
 package Basic_Functions;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,22 +22,52 @@ public class iframe_alert_popup_alertMessageAssertion {
 		// click on 'Try it' button
 		driver.findElement(By.xpath("/html/body/button")).click();
 
-		  // Switch to alert
-        	Alert alert = driver.switchTo().alert();
+		driver.close();
+	}
+}
+
+
+
+Alert Handle -
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class alertHandle {
+
+	@Test
+	public void alerthandle() throws InterruptedException {
 		
-		// Alert message Confirmation/assertion
-		String expectedMessasge = "I am an alert box!";
-		String actualMessage = alert.getText();
-		Assert.assertEquals(actualMessage, expectedMessasge);
-
-		System.out.println("actualMessage : " + actualMessage);
-		System.out.println("expectedMessasge : " + expectedMessasge);
-
-		// click on OK button on alert popup to close this popup
+		//driver setup
+		WebDriverManager.edgedriver().setup();
+		EdgeDriver driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		
+		//expected message
+		String expectedAlertMessage = "I am an alert box!";
+		
+		//click on alert
+		driver.findElement(By.xpath("//button[contains(text(),'Simple Alert')]")).click();
+		
+		//creating alert 
+		Alert alert = driver.switchTo().alert();
+		
+		//get alert pop up message 
+		String actualAlertMessage = alert.getText();
+		
+		//assert alert pop up message 
+		Assert.assertEquals(actualAlertMessage, expectedAlertMessage);
+		
+		//handle alert 
 		alert.accept();
 		
-		System.out.println("Passed...");
-
+		Thread.sleep(2000);
 		driver.close();
 	}
 }
