@@ -124,3 +124,62 @@ public class alertHandle {
 	}
 }
 
+Prompt Alert handle -
+
+
+import java.time.Duration;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class alertHandle {
+
+	@Test
+	public void verifyHandlingPromptAlert() throws InterruptedException {
+		
+		//Driver setup
+		WebDriverManager.edgedriver().setup();
+		EdgeDriver driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		
+		//Global Implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		//expected messages
+		String expectedPromptMessage = "Please enter your name:";
+		String expectedHelloDeepak = "Hello Deepak! How are you today?";
+		
+		//click on Prompt alert
+		driver.findElement(By.xpath("//button[contains(text(),'Prompt Alert')]")).click();
+		
+		//creating alert 
+		Alert alert = driver.switchTo().alert();
+		
+		//get Prompt alert pop up message 
+		String actualPromptMessage = alert.getText();
+		
+		//sendkey to conform alert 
+		alert.sendKeys("Deepak");
+		
+		//accept (OK) conform alert 
+		alert.accept();
+		
+		//assert alert pop up message -"Please enter your name:"
+		Assert.assertEquals(actualPromptMessage, expectedPromptMessage);
+		
+		//get "Hello Deepak! How are you today?" text
+		String actualHelloDeepak = driver.findElement(By.cssSelector("#demo")).getText();
+		
+		//assert "Hello Deepak! How are you today?" text
+		Assert.assertEquals(actualHelloDeepak, expectedHelloDeepak, "Prompt Alert not Handeled succesfully");
+		
+		Thread.sleep(2000);
+		driver.close();
+	}
+}
+
