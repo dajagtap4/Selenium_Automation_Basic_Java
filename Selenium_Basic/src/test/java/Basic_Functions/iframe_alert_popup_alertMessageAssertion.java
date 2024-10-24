@@ -71,3 +71,56 @@ public class alertHandle {
 		driver.close();
 	}
 }
+
+
+Confirm Alert Handle -
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class alertHandle {
+
+	@Test
+	public void alerthandle() throws InterruptedException {
+		
+		//driver setup
+		WebDriverManager.edgedriver().setup();
+		EdgeDriver driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		
+		//expected messages
+		String expectedConfirmMessage = "Press a button!";
+		String expectedYouPressedOkText = "You pressed OK!";
+		
+		//click on Confirm alert
+		driver.findElement(By.xpath("//button[contains(text(),'Confirmation Alert')]")).click();
+		
+		//creating alert 
+		Alert alert = driver.switchTo().alert();
+		
+		//get Confirm alert pop up message 
+		String actualConfirmMessage = alert.getText();
+		
+		//accept conform alert 
+		alert.accept();
+		
+		//assert alert pop up message - "Press a button!"
+		Assert.assertEquals(actualConfirmMessage, expectedConfirmMessage);
+		
+		//get "You pressed OK!" text
+		String actualYouPressedOkText = driver.findElement(By.cssSelector("#demo")).getText();
+		
+		//assert "You pressed OK!" text
+		Assert.assertEquals(actualYouPressedOkText, expectedYouPressedOkText);
+		
+		Thread.sleep(2000);
+		driver.close();
+	}
+}
+
