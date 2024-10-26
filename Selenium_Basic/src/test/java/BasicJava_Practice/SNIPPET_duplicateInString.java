@@ -1,6 +1,6 @@
  //REMOVE DUPLICATES FROM STRING
 
-String name = "abbcdde";
+String name = "Deepak Jagtap"; //Depak Jgt
         String result = "";
         
         for (int i = 0; i < name.length(); i++) {
