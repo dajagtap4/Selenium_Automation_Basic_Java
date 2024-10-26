@@ -1,23 +1,19 @@
-package BasicJava_Practice;
+ //REMOVE DUPLICATES FROM STRING
 
-public class SNIPPET_duplicateInString {
-
-	public static void main(String[] args) {
-		String str = "deepak jagtap";
-
-		char[] ch = str.toCharArray();
-
-		for (int i = 0; i < ch.length; i++) {
-
-			for (int j = i + 1; j < ch.length; j++) {
-				
-				if (ch[i] == ch[j]) {
-					
-					System.out.println(ch[j]);
-				}
-			}
-		}
-
-	}
-
-}
+String name = "abbcdde";
+        String result = "";
+        
+        for (int i = 0; i < name.length(); i++) {
+            boolean isDuplicate = false;
+            for (int j = 0; j < result.length(); j++) {
+                
+                if (name.charAt(i) == result.charAt(j)) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+             if (!isDuplicate) {
+                result += name.charAt(i);
+            }
+    }
+    System.out.println(result);
