@@ -6,11 +6,11 @@ Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 			.ignoring(NoSuchElementException.class);
 			
 			
-WebElement username = wait.until(new Function<WebDriver, WebDriver>()
+WebElement username = wait.until(new Function<WebDriver, WebElement>()
 	{
-		Public WebElement apply(WebDriver driver)
+		public WebElement apply(WebDriver driver)
 		{
-	 		return driver.FindElement(By.xpath(""));
+	 		return driver.findElement(By.xpath(""));
 		}
 	});
 	
