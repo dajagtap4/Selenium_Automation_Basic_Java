@@ -1,0 +1,90 @@
+notepad >  test.ts
+PS C:\Automation\Documentaion\Java Concepts> k6 run test.ts
+
+import http from 'k6/http';
+import { sleep } from 'k6';
+
+export const options={
+	vus:50,
+	duration:'60s',
+
+}
+
+export default function()  {
+
+	http.get("https://test.k6.io");
+	sleep(1);
+};
+
+
+
+open win powershell in administration mode
+
+C:\WINDOWS\system32> choco install k6  
+
+choco : The term 'choco' is not recognized as the name of a cmdlet, function, script file, or operable program. Check   
+the spelling of the name, or if a path was included, verify that the path is correct and try again. At line:1 char:1
++ choco install k6
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (choco:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+Install Chocolatey
+Follow these steps to install Chocolatey:
+
+Open PowerShell as Administrator: Press Win + X, choose Windows PowerShell (Admin).
+
+Run Installation Script: Paste the following script into PowerShell:
+
+PS C:\WINDOWS\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+PS C:\WINDOWS\system32> choco -v
+
+PS C:\WINDOWS\system32> choco install k6
+
+ The install of k6 was successful.
+  Deployed to 'C:\ProgramData\chocolatey\lib\k6\tools'
+
+
+PS C:\Automation\Documentaion\Java Concepts> k6 run test.ts
+
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/
+
+     execution: local
+        script: test.ts
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1 iterations for each of 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+     data_received..................: 17 kB 9.8 kB/s
+     data_sent......................: 442 B 256 B/s
+     http_req_blocked...............: avg=523.45ms min=523.45ms med=523.45ms max=523.45ms p(90)=523.45ms p(95)=523.45ms
+     http_req_connecting............: avg=210.42ms min=210.42ms med=210.42ms max=210.42ms p(90)=210.42ms p(95)=210.42ms
+     http_req_duration..............: avg=204.84ms min=204.84ms med=204.84ms max=204.84ms p(90)=204.84ms p(95)=204.84ms
+       { expected_response:true }...: avg=204.84ms min=204.84ms med=204.84ms max=204.84ms p(90)=204.84ms p(95)=204.84ms
+     http_req_failed................: 0.00% 0 out of 1
+     http_req_receiving.............: avg=0s       min=0s       med=0s       max=0s       p(90)=0s       p(95)=0s
+     http_req_sending...............: avg=581µs    min=581µs    med=581µs    max=581µs    p(90)=581µs    p(95)=581µs
+     http_req_tls_handshaking.......: avg=287.99ms min=287.99ms med=287.99ms max=287.99ms p(90)=287.99ms p(95)=287.99ms
+     http_req_waiting...............: avg=204.26ms min=204.26ms med=204.26ms max=204.26ms p(90)=204.26ms p(95)=204.26ms
+     http_reqs......................: 1     0.578086/s
+     iteration_duration.............: avg=1.72s    min=1.72s    med=1.72s    max=1.72s    p(90)=1.72s    p(95)=1.72s
+     iterations.....................: 1     0.578086/s
+     vus............................: 1     min=1      max=1
+     vus_max........................: 1     min=1      max=1
+
+
+running (00m01.7s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [======================================] 1 VUs  00m01.7s/10m0s  1/1 iters, 1 per VU
+
+
+
+
+
