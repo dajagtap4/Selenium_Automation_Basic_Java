@@ -1,3 +1,5 @@
+Video 1 - https://youtu.be/wEb4Qzleejg?si=I19EaQRrlvfPXA-7
+
 notepad >  test.ts
 PS C:\Automation\Documentaion\Java Concepts> k6 run test.ts
 
@@ -16,12 +18,13 @@ export default function()  {
 	sleep(1);
 };
 
-
+....................................
 
 open win powershell in administration mode
 
 C:\WINDOWS\system32> choco install k6  
 
+if getting below error install Chocolatey
 choco : The term 'choco' is not recognized as the name of a cmdlet, function, script file, or operable program. Check   
 the spelling of the name, or if a path was included, verify that the path is correct and try again. At line:1 char:1
 + choco install k6
@@ -29,14 +32,14 @@ the spelling of the name, or if a path was included, verify that the path is cor
     + CategoryInfo          : ObjectNotFound: (choco:String) [], CommandNotFoundException
     + FullyQualifiedErrorId : CommandNotFoundException
 
-Install Chocolatey
+--Install Chocolatey
 Follow these steps to install Chocolatey:
 
 Open PowerShell as Administrator: Press Win + X, choose Windows PowerShell (Admin).
 
 Run Installation Script: Paste the following script into PowerShell:
 
-PS C:\WINDOWS\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+--PS C:\WINDOWS\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 PS C:\WINDOWS\system32> choco -v
 
@@ -85,6 +88,89 @@ running (00m01.7s), 0/1 VUs, 1 complete and 0 interrupted iterations
 default ✓ [======================================] 1 VUs  00m01.7s/10m0s  1/1 iters, 1 per VU
 
 
+--------------------------------------------------------------------------------------------------------------------------
 
+video 2 - https://youtu.be/lon_NQTY6Jw?si=oXMbImjzSYuMMUnS
 
+Created below file in vs code playwright framework under k6 folder and navigate to that file through powerhsell,
+filename - post-request-test.js
 
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+export let options = {
+  vus: 10,  // Virtual users
+  duration: '30s', // Test duration
+};
+
+export default function () {
+  const url = 'https://your-api-endpoint.com/resource';
+  
+  // Payload for POST request
+  const payload = JSON.stringify({
+    key1: 'value1',
+    key2: 'value2',
+  });
+
+  // Headers
+  const headers = {
+    'Content-Type': 'application/json',
+  };
+
+  // Perform POST request
+  let response = http.post(url, payload, { headers });
+
+  // Validate response
+  check(response, {
+    'status is 200': (r) => r.status === 200,
+    'response time < 500ms': (r) => r.timings.duration < 500,
+    'response contains expected key': (r) => JSON.parse(r.body).key1 === 'value1',
+  });
+
+  // Simulate user wait time
+  sleep(1);
+}
+
+...............................................
+
+Run the Script
+PS C:\Users\deepak.jagtap\Desktop\Polestar_Assignment\k6> k6 run post-request-test.js
+
+result - 
+
+     ✓ status is 200
+     ✓ response time < 500ms
+     ✗ response contains expected key
+      ↳  0% — ✓ 0 / ✗ 960
+
+     checks.........................: 66.66% 1920 out of 2880
+     data_received..................: 858 kB 29 kB/s
+     data_sent......................: 199 kB 6.6 kB/s
+     http_req_blocked...............: avg=8.3ms    min=0s       med=0s       max=800.24ms p(90)=0s       p(95)=0s
+     http_req_connecting............: avg=3.64ms   min=0s       med=0s       max=352.28ms p(90)=0s       p(95)=0s
+     http_req_duration..............: avg=299.27ms min=253.66ms med=289.39ms max=429.97ms p(90)=341.83ms p(95)=348.91ms
+       { expected_response:true }...: avg=299.27ms min=253.66ms med=289.39ms max=429.97ms p(90)=341.83ms p(95)=348.91ms
+     http_req_failed................: 0.00%  0 out of 960
+     http_req_receiving.............: avg=335.93µs min=0s       med=0s       max=9.03ms   p(90)=577.56µs p(95)=2.33ms
+     http_req_sending...............: avg=38.79µs  min=0s       med=0s       max=1.79ms   p(90)=0s       p(95)=508.6µs
+     http_req_tls_handshaking.......: avg=3.97ms   min=0s       med=0s       max=385.98ms p(90)=0s       p(95)=0s
+     http_req_waiting...............: avg=298.89ms min=253.66ms med=289.2ms  max=429.97ms p(90)=340.98ms p(95)=348.73ms
+     http_reqs......................: 960    31.980128/s
+     iteration_duration.............: avg=307.96ms min=258.75ms med=289.6ms  max=1.13s    p(90)=343.52ms p(95)=350.63ms
+     iterations.....................: 960    31.980128/s
+     vus............................: 10     min=10           max=10
+     vus_max........................: 10     min=10           max=10
+
+..................................
+
+get result in csv file 
+
+use below command 
+PS C:\Users\deepak.jagtap\Desktop\Polestar_Assignment\k6> k6 run --out csv=test-result.csv post-request-test.js
+
+with above command .csv file generated at same location open that file in excel see report.
+
+Done Video2
+--------------------------------------------------------------------------------------------------------------------------
+
+video 3 - https://youtu.be/OIahoSmB2z8?si=JLNYBg1bwe0FmtBE
