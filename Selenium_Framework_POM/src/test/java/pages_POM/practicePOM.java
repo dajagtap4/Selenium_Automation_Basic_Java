@@ -9,8 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class practicePOM {
 	private WebDriver driver;
 
-	@FindBy(id = "name")
-	private WebElement userName;
+	By userName = By.id("name");
 
 	public practicePOM(WebDriver driver) {
 		this.driver = driver;
@@ -18,7 +17,7 @@ public class practicePOM {
 	}
 
 	public String enterName(String name) {
-		userName.sendKeys(name);
+		driver.findElement(userName).sendKeys(name);
 		return name;
 	}
 
@@ -27,7 +26,7 @@ public class practicePOM {
 	}
 
 	public String getEnteredNameInNameInputBox() {
-		return userName.getAttribute("value");
+		return driver.findElement(userName).getAttribute("value");
 	}
 
 }
