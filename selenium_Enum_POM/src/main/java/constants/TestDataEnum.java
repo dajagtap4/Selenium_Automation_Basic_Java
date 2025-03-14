@@ -13,6 +13,7 @@ public enum TestDataEnum {
     USERNAME("Deepak"),
     EXPECTED_TITLE("Automation Testing Practice"),
     WRONG_TITLE("Wrong Title"),
+    SPECIAL_CHARS("!@#$%"),
 	
     // Example Locators
     NAME_INPUT_BOX("name");

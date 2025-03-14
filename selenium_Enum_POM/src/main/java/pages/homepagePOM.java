@@ -25,4 +25,12 @@ public class homepagePOM {
 	public void enterName(String name) throws IOException {
 		driver.findElement(username).sendKeys(name);
 	}
+
+	public String getPageTitle1() {
+		return driver.getTitle();
+	}
+
+	public String getEnteredNameInNameInputBox() {
+		return driver.findElement(username).getAttribute("value");
+	}
 }

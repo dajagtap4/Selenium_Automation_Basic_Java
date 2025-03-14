@@ -5,7 +5,9 @@
     <classes>
       <class name="testcases.TestLevelClass">
         <methods>
-          <include name="checkUserCanEnterInputInNameInputField"/>
+          <include name="driverInstance"/>
+          <include name="teardown"/>
+          <include name="verifyUserCanEnterEmptyName"/>
         </methods>
       </class> <!-- testcases.TestLevelClass -->
     </classes>
