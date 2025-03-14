@@ -50,10 +50,10 @@ public class TestLevelClass extends BaseTest {
 	}
 
 	@Test
-	public void verifyUserCanNotEnterEmptyName() throws IOException {
+	public void verifyUserCanEnterEmptyName() throws IOException {
 		homepage.enterName("");
 		String enteredName2 = homepage.getEnteredNameInNameInputBox();
-		Assert.assertTrue(enteredName2.isEmpty(), "Test failed: Entered input value!");
+		Assert.assertTrue(enteredName2.isEmpty(), "Test failed: Entered input value, Dont enter any value");
 	}
 
 	@Test
