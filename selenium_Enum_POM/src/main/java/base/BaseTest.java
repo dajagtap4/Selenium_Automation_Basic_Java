@@ -20,22 +20,46 @@ public class BaseTest {
 	
 	@BeforeClass
 	public void driverInstance() throws IOException {
-		String browser = Utilities.fetchConfigProperties("browser1").toString();
-		String browser2 = Utilities.fetchConfigProperties("browser2").toString();
-		String browser3 = Utilities.fetchConfigProperties("browser3").toString();
-		
-		if(browser.equalsIgnoreCase(TestDataEnum.CHROME_BROWSER.getValue())) {
+
+String browser = TestDataEnum.EDGE_BROWSER.getValue();
+
+		switch (browser.toLowerCase()) {
+		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			break;
+
+		case "edge":
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			break;
+
+		case "firefox":
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			break;
+			
+		 default:
+             throw new IllegalArgumentException("Invalid browser type specified: " + browser);
 		}
-		else if(browser2.equalsIgnoreCase(TestDataEnum.EDGE_BROWSER.getValue())) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-		}
-		else if(browser3.equalsIgnoreCase(TestDataEnum.FIREFOX_BROWSER.getValue())) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		}
+
+		// String browser = Utilities.fetchConfigProperties("browser1").toString();
+		// String browser2 = Utilities.fetchConfigProperties("browser2").toString();
+		// String browser3 = Utilities.fetchConfigProperties("browser3").toString();
+		
+		// if(browser.equalsIgnoreCase(TestDataEnum.CHROME_BROWSER.getValue())) {
+		// 	WebDriverManager.chromedriver().setup();
+		// 	driver = new ChromeDriver();
+		// }
+		// else if(browser2.equalsIgnoreCase(TestDataEnum.EDGE_BROWSER.getValue())) {
+		// 	WebDriverManager.edgedriver().setup();
+		// 	driver = new EdgeDriver();
+		// }
+		// else if(browser3.equalsIgnoreCase(TestDataEnum.FIREFOX_BROWSER.getValue())) {
+		// 	WebDriverManager.firefoxdriver().setup();
+		// 	driver = new FirefoxDriver();
+		// }
+
 		driver.manage().window().maximize();
 		driver.get(TestDataEnum.BASE_URL.getValue());
 		
