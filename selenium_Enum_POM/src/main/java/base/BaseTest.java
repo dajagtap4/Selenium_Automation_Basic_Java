@@ -61,8 +61,6 @@ String browser = TestDataEnum.EDGE_BROWSER.getValue();
 		// }
 
 		driver.manage().window().maximize();
-		driver.get(TestDataEnum.BASE_URL.getValue());
-		
 		homepage = new homepagePOM(driver);
 	}
 
