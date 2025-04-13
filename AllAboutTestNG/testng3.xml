@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="loan D">
+	
+	<test name="P loan">
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="testngPackage.test1" />
+			<class name="testngPackage.test2" />
+			<class name="testngPackage.test3" />
+			<class name="testngPackage.test4" />
+		</classes>
+	</test>
+</suite> 
