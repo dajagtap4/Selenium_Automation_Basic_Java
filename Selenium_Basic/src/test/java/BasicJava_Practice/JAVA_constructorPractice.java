@@ -36,10 +36,11 @@ public class constructorPractice {
 
 // Key Points
 	
-// Constructors and Class Name: Constructors must have the same name as the class.
-// No Return Type: Constructors do not have a return type, not even void.
-// Overloading: You can have multiple constructors in a class (constructor overloading) with different parameters.
-// Implicit Call: The default constructor is called implicitly if no constructor is defined.
+Constructors and Class Name: Constructors must have the same name as the class.
+No Return Type: Constructors do not have a return type, not even void.
+Overloading: You can have multiple constructors in a class (constructor overloading) with different parameters.
+If no constructor is explicitly defined in the class, Java automatically provides a default (no-argument) constructor. 
+      ^->This default constructor is called when you create an object without arguments.
 
 constructors in Java cannot be static. 
 Constructors are special methods that are invoked when an instance of a class is created. 
