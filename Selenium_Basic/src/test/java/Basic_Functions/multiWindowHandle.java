@@ -1,11 +1,18 @@
 package Basic_Functions;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class multiWindowHandle {
 
@@ -13,26 +20,30 @@ public class multiWindowHandle {
 	public void multiWindowHandle_method() throws InterruptedException {
 		driverSetup.setUp();
 		ChromeDriver driver = new ChromeDriver();
-		driver.get("https://www.salesforce.com/in/?ir=1");
+
+		driver.get("https://demo.automationtesting.in/Windows.html");
 		driver.manage().window().maximize();
 
-		driver.findElement(By.cssSelector(
-				"#\\31 682325589592_4ma > div.container > article > div.content__wrapper > div > pbc-button:nth-child(1) > a"))
-				.click();
+		// Store parent window
+		String parentWindow = driver.getWindowHandle();
 
-		Set<String> windowhandles = driver.getWindowHandles();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'click')]")));
+		button.click();
 
-		Iterator<String> iterator = windowhandles.iterator();
-		String parentW = iterator.next();
-		String childW = iterator.next();
+		// Get all window handles
+		Set<String> allWindows = driver.getWindowHandles();
 
-		driver.switchTo().window(childW);
-
-		driver.findElement(By.name("UserFirstName")).sendKeys("Deepak");
-		driver.findElement(By.name("UserLastName")).sendKeys("Jagtap");
-
-		driver.switchTo().window(parentW);
+		// Loop and switch
+		for (String window : allWindows) {
+			if (!window.equals(parentWindow)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
 		Thread.sleep(2000);
-		driver.quit();		
+		driver.switchTo().window(parentWindow);
+		Thread.sleep(2000);
+		driver.quit();
 	}
 }
